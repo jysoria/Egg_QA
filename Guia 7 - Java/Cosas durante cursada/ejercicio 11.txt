@@ -1,0 +1,40 @@
+public static void main(String[] args) {
+        
+        int largo;
+        String frase = "Ayer, lunes, salimos a las once y 10.";
+        String frase2= "";
+        String letra;
+        largo = frase.length();
+        
+        for(int i=0 ; i<largo; i++ ){
+            
+            letra = frase.substring(i,i+1);
+            
+            switch(letra){
+                case "a":
+                case "A":
+                    frase2 = frase2.concat("@");
+                    break;
+                case "e":
+                case "E":
+                    frase2 = frase2.concat("#");
+                    break;
+                case "i":
+                case "I":
+                    frase2 = frase2.concat("$");
+                    break;
+                case "o":
+                case "O":
+                    frase2 = frase2.concat("%");
+                    break;
+                case "u":
+                case "U":
+                    frase2 = frase2.concat("*");
+                    break;
+                default:
+                    frase2 = frase2.concat(letra);
+            }
+           
+        }
+        
+        System.out.println(frase2);
